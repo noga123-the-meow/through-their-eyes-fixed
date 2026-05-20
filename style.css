@@ -1,0 +1,256 @@
+/* הגדרות כלליות */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+  background: #8500ad;
+  color: white;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Assistant', sans-serif;
+    margin: 0;
+}
+
+/* תפריט ניווט */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    margin: 0 20px;
+    text-decoration: none; 
+    color: white;
+    font-weight: 600;
+}
+
+/* עמוד הבית */
+#home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("home-img.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.word {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 800;
+    display: block;
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.first { color: #ffffff; }
+.second { color: #8500ad; margin-left: 5%; }
+.three { color: #ffffff; margin-left: 10%; }
+
+/* תוכן */
+#about, #types {
+    padding: 100px 10%;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(90deg, #8500ad, #333);
+    padding: 10px 30px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+/* תיבת עיוורון צבעים - טקסט לבן וברור */
+.color-blind-box {
+    background: linear-gradient(136deg, #8500ad 3%, #9e007d 20%, #de0000 83%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+
+.color-blind-box strong {
+    display: block;
+    font-size: 2rem;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+/* תיבת הדיסלקציה - התיקון הקריטי למניעת הבלאגן בתמונה */
+#sentence {
+    display: block;
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border-left: 5px solid #8500ad;
+    
+    /* פונט קבוע ויישור לשמאל */
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: left;           /* מבטיח שהטקסט לא יברח ימינה */
+    direction: ltr;            /* כיוון טקסט משמאל לימין לאנגלית */
+    white-space: pre-line;     /* שומר על פסקאות אבל מונע גלישה מוזרה */
+    overflow-wrap: break-word; /* שובר מילים ארוכות כדי שלא יצאו מהמסגרת */
+}
+
+#types strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #8500ad;
+    margin-top: 30px;
+}
+
+.arrow a {
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* slider */
+.slider {
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+  position: relative;
+
+  margin: 0;
+  border-radius: 0;
+
+  box-shadow: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+/*  כל שקופית */
+.slide {
+  position: relative;
+  overflow: hidden;
+  width: 25%;
+  height: 100%;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+
+  z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+/* טקסט */
+.txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  direction: rtl;
+
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+input {
+  display: none;
+}
+
+
+/* כאלה ללחוץ עליהם */
+.nav {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 9;
+}
+
+.nav label {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: rgb(165, 165, 165);
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* מצב פועל */
+#s1:checked ~ .nav label[for="s1"],
+#s2:checked ~ .nav label[for="s2"],
+#s3:checked ~ .nav label[for="s3"],
+#s4:checked ~ .nav label[for="s4"] {
+  background-color: rgb(255, 255, 255);
+}
+
+/* מעבר בין שקופיות */
+#s1:checked ~ .slides { transform: translateX(0%); }
+#s2:checked ~ .slides { transform: translateX(-25%); }
+#s3:checked ~ .slides { transform: translateX(-50%); }
+#s4:checked ~ .slides { transform: translateX(-75%); }
+
+#picture-gallery,
+#sentence {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition:
+        max-height 0.7s ease,
+        opacity 0.5s ease;
+}
+
+#picture-gallery.open,
+#sentence.open {
+    max-height: 3000px;
+    opacity: 1;
+}
