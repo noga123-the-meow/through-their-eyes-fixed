@@ -46,7 +46,17 @@ function shuffleSentence() {
     sentenceEl.innerText = shuffledWords.join(" ");
 }
 
+const slides = document.querySelectorAll('input[name="slide"]');
 
+next.onclick = () => {
+  let current = [...slides].findIndex(s => s.checked);
+  slides[(current + 1) % slides.length].checked = true;
+};
+
+prev.onclick = () => {
+  let current = [...slides].findIndex(s => s.checked);
+  slides[(current - 1 + slides.length) % slides.length].checked = true;
+};
 
 /* const colors = ["#ff3b3b", "#4cc9f0", "#b5179e", "#f9c74f"];
 
