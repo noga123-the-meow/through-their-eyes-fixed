@@ -314,7 +314,7 @@ input {
   height: 15px;
   margin: 0 5px;
 
-  background: rgb(89, 0, 179);
+  background: rgb(191, 191, 191);
   border-radius: 50%;
 
   cursor: pointer;
@@ -333,7 +333,7 @@ input {
 #s3:checked ~ .nav label[for="s3"],
 #s4:checked ~ .nav label[for="s4"],
 #s5:checked ~ .nav label[for="s5"] {
-  background-color: rgb(204, 153, 255);
+  background-color: rgb(102, 102, 102);
 }
 
 /* slide movement */
