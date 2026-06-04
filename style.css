@@ -314,7 +314,7 @@ input {
   height: 70px;
   margin: 0 5px;
 
-  background: rgb(165, 165, 165);
+  background: red;
   border-radius: 50%;
 
   cursor: pointer;
