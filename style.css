@@ -497,3 +497,19 @@ input {
     padding: 20px;
   }
 }
+
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .eye {
+    margin-top: 30px;
+  }
+
+  .home-text {
+    align-items: center;
+  }
+}
