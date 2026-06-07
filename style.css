@@ -360,7 +360,7 @@ input {
 
 /* expandable sections */
 #picture-gallery,
-#sentence {
+.sentence {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -371,7 +371,7 @@ input {
 }
 
 #picture-gallery.open,
-#sentence.open {
+.sentence.open {
   max-height: 3000px;
   opacity: 1;
 }
