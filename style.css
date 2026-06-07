@@ -202,9 +202,23 @@ h2 {
 #sentence {
     display: block;
     background: #2a2a2a;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 15px;
     margin-top: 20px;
+    
+    /* פונט קבוע ויישור לשמאל */
+    font-family: 'Courier New', Courier, monospace; 
+    text-align: left;           /* מבטיח שהטקסט לא יברח ימינה */
+    direction: ltr;            /* כיוון טקסט משמאל לימין לאנגלית */
+    white-space: pre-line;     /* שומר על פסקאות אבל מונע גלישה מוזרה */
+    overflow-wrap: break-word; /* שובר מילים ארוכות כדי שלא יצאו מהמסגרת */
+}
+
+.sentence {
+    display: block;
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 10px;
     border-left: 5px solid #8500ad;
     
     /* פונט קבוע ויישור לשמאל */
@@ -214,6 +228,7 @@ h2 {
     white-space: pre-line;     /* שומר על פסקאות אבל מונע גלישה מוזרה */
     overflow-wrap: break-word; /* שובר מילים ארוכות כדי שלא יצאו מהמסגרת */
 }
+
 
 #types strong {
     display: block;
