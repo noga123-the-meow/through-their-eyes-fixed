@@ -1,3 +1,43 @@
+let originalText = "";
+let shuffleInterval;
+let dyslexiaEnabled = true;
+
+window.onload = () => {
+    const sentenceEl = document.getElementById('sentence');
+
+    if (sentenceEl) {
+        originalText = sentenceEl.innerText;
+
+        shuffleInterval = setInterval(shuffleSentence, 400);
+    }
+};
+
+// פונקציה לכפתור
+function toggleDyslexia() {
+
+    const icon = document.querySelector(".eye-button .material-symbols-outlined");
+    const sentenceEl = document.getElementById("sentence");
+
+    if (dyslexiaEnabled) {
+
+        clearInterval(shuffleInterval);
+
+        sentenceEl.innerText = originalText;
+
+        icon.textContent = "visibility_off";
+
+        dyslexiaEnabled = false;
+
+    } else {
+
+        shuffleInterval = setInterval(shuffleSentence, 400);
+
+        icon.textContent = "visibility";
+
+        dyslexiaEnabled = true;
+    }
+}
+
 // פונקציה לערבוב אותיות בתוך מילה
 function shuffleWord(word) {
     if (word.length <= 3) return word;
