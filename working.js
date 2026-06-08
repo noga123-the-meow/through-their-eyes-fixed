@@ -1,3 +1,4 @@
+// שמירת הטקסט המקורי כדי שלא ייהרס עם הערבובים החוזרים
 let originalText = "";
 let shuffleInterval;
 let dyslexiaEnabled = true;
@@ -64,9 +65,6 @@ function shuffleWord(word) {
 
     return first + middle.join("") + end;
 }
-
-// שמירת הטקסט המקורי כדי שלא ייהרס עם הערבובים החוזרים
-let originalText = "";
 
 window.onload = () => {
     const sentenceEl = document.getElementById('sentence');
