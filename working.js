@@ -66,14 +66,6 @@ function shuffleWord(word) {
     return first + middle.join("") + end;
 }
 
-window.onload = () => {
-    const sentenceEl = document.getElementById('sentence');
-    if (sentenceEl) {
-        originalText = sentenceEl.innerText;
-        // הרצה כל 400 מילישניות (קצת יותר נעים לעין מהמהירות הקודמת)
-        setInterval(shuffleSentence, 400);
-    }
-};
 
 function shuffleSentence() {
     const sentenceEl = document.getElementById('sentence');
